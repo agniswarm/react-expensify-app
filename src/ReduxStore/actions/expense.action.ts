@@ -7,10 +7,10 @@ export const addExpenses = (expense: Expense): ExpenseAction => ({
     type: 'ADD_EXPENSES',
     expense: {
         id: uuid(),
-        desciption: expense.desciption,
+        description: expense.description,
         note: expense.note,
         amount: expense.amount,
-        createdAt: new Date().getTime()
+        createdAt: expense.createdAt
     }
 })
 

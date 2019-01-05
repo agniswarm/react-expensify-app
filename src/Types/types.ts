@@ -6,7 +6,7 @@ export interface State {
 }
 export interface Expense {
     id: string;
-    desciption: string;
+    description: string;
     note: string;
     amount: Number;
     createdAt: number;
@@ -43,7 +43,7 @@ export interface EditExpenseAction extends Action<string> {
 
 export const emptyExpense: Expense = {
     id: "",
-    desciption: "",
+    description: "",
     note: "",
     amount: 0,
     createdAt: 0

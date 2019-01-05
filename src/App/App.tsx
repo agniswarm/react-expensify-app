@@ -11,7 +11,7 @@ import Header from '../Components/Header'
 const SwitchRouters = () => (
   <Switch>
     <Route path="/" component={Dashboard} exact={true} />
-    <Route path="/edit" component={EditExpense} exact={true} />
+    <Route path="/edit/:id" component={EditExpense} exact={true} />
     <Route path="/create" component={CreateExpensePage} exact={true} />
     <Route path="/help" component={HelpPage} exact={true} />
     <Route component={NotFoundPage} />

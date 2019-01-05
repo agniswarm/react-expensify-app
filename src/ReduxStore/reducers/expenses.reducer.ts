@@ -10,8 +10,9 @@ export const expensesReducer: Reducer<Array<Expense>, any> =
                 return state.filter(({ id }) => id != action.id)
             case "EDIT_EXPENSES":
                 return state.map((expense) => {
-                    if (expense.id === action.id)
-                        return { ...expense, ...action.expense }
+                    if (expense.id === action.id) {
+                        return { ...expense, ...action.updates }
+                    }
                     return expense
                 })
             default:

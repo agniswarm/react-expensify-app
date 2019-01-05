@@ -13,19 +13,19 @@ import { emptyExpense } from './Types/types'
 store.dispatch(addExpenses({
     ...emptyExpense,
     amount: 200,
-    desciption: "Water Bill",
+    description: "Water Bill",
     note: "This is the waterbill for the month of january"
 }))
 store.dispatch(addExpenses({
     ...emptyExpense,
     amount: 1500,
-    desciption: "Gas Bill",
+    description: "Gas Bill",
     note: "This is the gasbill for the month of january"
 }))
 store.dispatch(addExpenses({
     ...emptyExpense,
     amount: 1300,
-    desciption: "Rent",
+    description: "Rent",
     note: "This is the rent for the month of january"
 }))
 
@@ -37,6 +37,10 @@ const jsx = (
         <AppRouter />
     </Provider>
 )
+
+store.subscribe(() => {
+    console.log(store.getState())
+})
 
 console.log(getVisibleExpenses(state.expenses, state.filters))
 ReactDOM.render(jsx, document.getElementById('root'));
